@@ -13,27 +13,27 @@ public class O2 {
 		
 		if (inntekt <= 208050) 
 		{
-			out.println("ingen trinnskatt");
+			out.println("Ingen trinnskatt");
 		}
 		if (inntekt >= 208051 && inntekt <= 292850) 
-		{
-			out.println("du må betale 1.7% i trinnskatt, det vil si" + "\n" + inntekt*0.017 + "NOK");
+		{	
+			out.println("Du må betale "  + (inntekt-208051)*0.017 + "NOK i trinnskatt");
 		}
 		if (inntekt >= 292851 && inntekt <= 670000) 
 		{
-			out.println("du må betale 4.0% i trinnskatt, det vil si" + "\n" + inntekt*0.04 + " NOK");
+			out.println("Du må betale " + ((292850-208051)*0.017 + (inntekt-292850)*0.04) + " NOK i trinnskatt");
 		}
 		if (inntekt >= 670001 && inntekt <= 937900) 
 		{
-			out.println("du må betale 13.6% i trinnskatt, det vil si" + "\n" + inntekt*0.136 + " NOK");
+			out.println("Du må betale " + ((292850-208051)*0.017 + (670000-292851)*0.04 + (inntekt-670000)*0.136) + " NOK i trinnskatt");
 		}
 		if (inntekt >= 937901 && inntekt <= 1350000) 
 		{
-			out.println("du må betale 16.6% i trinnskatt, det vil si" + "\n" + inntekt*0.166 + " NOK");
+			out.println("Du må betale " + ((292850-208051)*0.017 + (670000-292851)*0.04 + (937900-670001)*0.136 + (inntekt - 937900)*0.166) +" NOK i trinnskatt");
 		}
 		if (inntekt >= 1350001) 
 		{
-			out.println("du må betale 17.6% i trinnskatt, det vil si" + "\n" + inntekt*0.176 + " NOK");
+			out.println("Du må betale " + ((292850-208051)*0.017 + (670000-292851)*0.04 + (937900-670001)*0.136 + (1350000-937901)*0.166 + (inntekt - 1350000)*0.176) + " NOK i trinnskatt");
 		}
 	}
 
